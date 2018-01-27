@@ -1,6 +1,8 @@
 # Example Custom Backend for NetlifyCMS
 
-***Note:*** This is a test backend library for the NetlifyCMS project proposed for backend registries into the CMS [tracked with this PR][1]
+***Note:*** This is a backend library for NetlifyCMS proposed for file system testing of a CMS locally [was contingent on this PR][1]
+
+***Note #2:*** Created to be used for development purposes of a NetlifyCMS project. Handy for testing your config files.
 
 To use:
 
@@ -12,7 +14,7 @@ To load dependencies for build
 yarn
 ```
 
-To build `dist/offline-backend.js`
+To build `dist/fs-backend.js`
 
 ```bash
 yarn build
@@ -20,7 +22,7 @@ yarn build
 
 ## How to register with CMS
 
-  - Copy the `dist/offline-backend.js` script bundle file into your cms location.
+  - Copy the `dist/fs-backend.js` script bundle file into your cms location.
   - Change the `index.html` page to use the backend as in the example below
   - Register the backend Class to the CMS as shown below
   - Change the `config.yml` backend to `backend: offline` or the name you registered
@@ -30,12 +32,12 @@ yarn build
 ```html
 <head>
   ...
-  <script type="text/javascript" src="offline-backend.js"/>
+  <script type="text/javascript" src="fs-backend.js"/>
 </head>
 <body>
   <script type="text/javascript" src='cms.js'/>
   <script>
-    CMS.registerBackend("offline", OfflineBackendClass)
+    CMS.registerBackend("file-system", FileSystemBackendClass)
   </script>
 </body>
 ```
@@ -46,7 +48,7 @@ A React Component is required for the auth page of a backend in the NetlifyCMS, 
 
 This library is using some styling that was in the NetlifyCMS, but it is better practice to style the component in your backend auth so a change does not break your component. (hey, call me lazy today 😁)
 
-***WARNING:*** This is a proof of concept at the time of the PR, there could be breaking changes to this library once/if the [final PR][1] is merged into NetlifyCMS.
+***WARNING:*** This is a proof of concept at this time, there could be breaking changes to this library. I believe it can safely be used in a repository, since it is not used in production code. Ping me if you are not sure.
 
 Don't forget: code like you are on 🔥
 
