@@ -25,7 +25,9 @@ yarn build
   - Copy the `dist/fs-backend.js` script bundle file into your cms location.
   - Change the `index.html` page to use the backend as in the example below
   - Register the backend Class to the CMS as shown below
-  - Change the `config.yml` backend to `backend: offline` or the name you registered
+  - Change the `config.yml` backend to `backend: file-system` or the name you registered
+  - [Webpack] Add devServer middleware to expose the `/api` path for the file-system API
+  - [Stand Alone Server] Create an express server (coming soon) to host the `/api` endpoint
 
 ### Add script and register in your CMS page
 
