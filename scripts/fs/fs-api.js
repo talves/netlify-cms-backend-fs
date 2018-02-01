@@ -5,16 +5,17 @@ const projectRoot = path.join(__dirname, '../../');
 console.log(`Root path is ${ projectRoot }`);
 
 let siteRel = "example";
-const siteDir = () => path.join(projectRoot, siteRel);
 const siteRoot = {
-  setPath: (relPath) => {
-    siteRel = relPath;
-  },
-  dir: siteDir()
+  dir: path.join(projectRoot, siteRel)
 };
-console.log(`Site path is ${ siteRoot.dir }`);
+const setPath = (relPath) => {
+  siteRel = relPath;
+  siteRoot.dir = path.join(projectRoot, siteRel);
+  console.log(`Site path is ${ siteRoot.dir }`);
+};
 
 module.exports = {
+  site: { setPath },
   files: (dirname) => {
     const name = "Files";
     const read = (cb) => {

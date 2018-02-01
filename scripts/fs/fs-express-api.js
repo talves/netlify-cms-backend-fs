@@ -12,9 +12,11 @@
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const fsAPI = require('./fs-api');
+const fsPath = '';
 
 /* Express allows for app object setup to handle paths (our api routes) */
 module.exports = function(app) {
+  fsAPI.site.setPath(fsPath);
   const upload = multer(); // for parsing multipart/form-data
   const uploadLimit = '50mb'; // express has a default of ~20Kb
   app.use(bodyParser.json({ limit: uploadLimit })); // for parsing application/json
