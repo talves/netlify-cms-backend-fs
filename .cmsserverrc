@@ -1,0 +1,14 @@
+# -p, --cms-path <cmsPath>', 'CMS server absolute path
+cmsPath = "/admin"
+
+# '-l, --site-location <siteLocation>', 'site root location'
+siteLocation = "examples/site"
+
+# '-c, --cms-location <cmsLocation>', 'CMS app location'
+cmsLocation = "examples/site/admin"
+
+# '-d, --dist-location <distLocation>', 'CMS build location'
+distLocation = "examples/site/admin"
+
+# port the server will run on localhost
+port = 8090
