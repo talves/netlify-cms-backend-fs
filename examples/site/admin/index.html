@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title>This is an example</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="cms.css"/>
+  <link rel="stylesheet" href="fs-backend.css"/>
+  <script type="text/javascript" src="fs-backend.js"></script>
+</head>
+<body>
+
+  <script type="text/javascript" src="cms.js"></script>
+  <script>
+    var PostPreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var image = entry.getIn(['data', 'image']);
+        var bg = image && this.props.getAsset(image);
+        return h('div', {},
+          h('div', {className: "cover"},
+            h('h1', {}, entry.getIn(['data', 'title'])),
+            bg ? h('img', {src: bg.toString()}) : null
+          ),
+          h('p', {},
+            h('small', {}, "Written " + entry.getIn(['data', 'date']))
+          ),
+          h('div', {"className": "text"}, this.props.widgetFor('body'))
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("posts", PostPreview);
+    CMS.registerBackend("file-system", FileSystemBackendClass)
+  </script>
+</body>
+</html>
