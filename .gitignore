@@ -1,6 +1,9 @@
 dist/
 node_modules/
 
+cms.*
+fs-backend.*
+
 .vscode/
 
 .DS_Store
