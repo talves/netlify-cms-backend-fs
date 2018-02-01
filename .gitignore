@@ -1,6 +1,9 @@
 dist/
 node_modules/
 
+# ignore created assets for testing
+/examples/site/images
+/examples/site/posts
 cms.*
 fs-backend.*
 

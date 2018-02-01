@@ -1,5 +1,7 @@
 # Example Custom Backend for NetlifyCMS
 
+***Update:*** Currently comes with an express served test example
+
 ***Note:*** This is a backend library for NetlifyCMS proposed for file system testing of a CMS locally [was contingent on this PR][1]
 
 ***Note #2:*** Created to be used for development purposes of a NetlifyCMS project. Handy for testing your config files.
@@ -12,6 +14,12 @@ To load dependencies for build
 
 ```bash
 yarn
+```
+
+To build assets and run example server [http://localhost:8090/admin/](http://localhost:8090/admin/)
+
+```bash
+yarn start
 ```
 
 To build `dist/fs-backend.js`
