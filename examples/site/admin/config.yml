@@ -2,13 +2,13 @@ backend:
   name: file-system
   api_root: http://localhost:8090/api
 
-media_folder: "examples/site/images" # Folder where user uploaded files should go
+media_folder: "images" # Folder where user uploaded files should go
 public_folder: "/images"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "posts" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Post" # Used in the UI, e.g., "New Post"
-    folder: "examples/site/posts" # The path to the folder where the documents are stored
+    folder: "posts" # The path to the folder where the documents are stored
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
