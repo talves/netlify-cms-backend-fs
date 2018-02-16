@@ -1,6 +1,6 @@
 {
   "name": "netlify-cms-backend-offline",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Backend for Netlify CMS to test into local file system",
   "main": "index.js",
   "license": "MIT",

@@ -24,7 +24,7 @@ const config = require("rc")("cmsserver", defaultConf);
 const projectRoot = path.join(__dirname, "../");
 
 program
-  .version('0.1.0')
+  .version('0.2.0')
   .description('Run the express server')
   .usage('<cmd>')
   .option('-p, --cms-path <cmsPath>', 'CMS server absolute path (virtual)', config.cmsPath)
