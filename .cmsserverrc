@@ -1,8 +1,8 @@
 # -p, --cms-path <cmsPath>', 'CMS server absolute path
 cmsPath = "/admin"
 
-# '-l, --site-location <siteLocation>', 'site root location'
-siteLocation = "examples/site"
+# '-l, --repo-location <repoLocation>', 'repo root location'
+repoLocation = "examples/site"
 
 # '-c, --cms-location <cmsLocation>', 'CMS app location'
 cmsLocation = "examples/site/admin"

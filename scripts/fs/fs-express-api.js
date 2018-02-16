@@ -12,11 +12,15 @@
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const fsAPI = require('./fs-api');
-const fsPath = '';
+
+const defaultConf = {
+  repoLocation: "",
+}
+const config = require("rc")("cmsserver", defaultConf);
 
 /* Express allows for app object setup to handle paths (our api routes) */
 module.exports = function(app) {
-  fsAPI.site.setPath(fsPath);
+  fsAPI.repository.setPath(config.repoLocation);
   const upload = multer(); // for parsing multipart/form-data
   const uploadLimit = '50mb'; // express has a default of ~20Kb
   app.use(bodyParser.json({ limit: uploadLimit })); // for parsing application/json

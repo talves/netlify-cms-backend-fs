@@ -4,23 +4,23 @@ const path = require('path');
 const projectRoot = path.join(__dirname, '../../');
 console.log(`Root path is ${ projectRoot }`);
 
-let siteRel = "example";
-const siteRoot = {
-  dir: path.join(projectRoot, siteRel)
+let repoRel = ".";
+const cmsRoot = {
+  dir: path.join(projectRoot, repoRel)
 };
 const setPath = (relPath) => {
-  siteRel = relPath;
-  siteRoot.dir = path.join(projectRoot, siteRel);
-  console.log(`Site path is ${ siteRoot.dir }`);
+  repoRel = relPath;
+  cmsRoot.dir = path.join(projectRoot, repoRel);
+  console.log(`Repository root path is ${ cmsRoot.dir }`);
 };
 
 module.exports = {
-  site: { setPath },
+  repository: { setPath },
   files: (dirname) => {
     const name = "Files";
     const read = (cb) => {
       if (!cb) throw new Error("Invalid call to files.read - requires a callback function(content)");
-      const thispath = path.join(siteRoot.dir, dirname);
+      const thispath = path.join(cmsRoot.dir, dirname);
       const files = fs.existsSync(thispath) ? fs.readdirSync(thispath) : [];
       const filelist = [];
       files.forEach(function(element) {
@@ -36,7 +36,7 @@ module.exports = {
   },
   file: (id) => {
     const name = "File";
-    const thisfile = path.join(siteRoot.dir, id);
+    const thisfile = path.join(cmsRoot.dir, id);
     let stats;
     try {
       stats = fs.statSync(thisfile);
