@@ -1,5 +1,7 @@
 # Example Custom Backend for NetlifyCMS
 
+***Recommendation:*** If you are looking to extend NetlifyCMS and run a local file-system setup for development, use the [netlify-cms-react-example](https://github.com/talves/netlify-cms-react-example) starter project. It implements the backend as a component and bundles to a custom CMS deployment for your project.
+
 ***Note:*** This is a backend library for NetlifyCMS proposed for file system testing of a CMS locally [was contingent on this PR][1]
 
 ***Note #2:*** Created to be used for development purposes of a NetlifyCMS project. Handy for testing your config files.
