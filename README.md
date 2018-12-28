@@ -1,4 +1,6 @@
-# Example Custom Backend for NetlifyCMS
+This solution has been moved to my organization and will be maintained at [netlify-cms-components][3]
+
+# [Deprecated] Example Custom Backend for NetlifyCMS
 
 ***Recommendation:*** If you are looking to extend NetlifyCMS and run a local file-system setup for development, use the [netlify-cms-react-example](https://github.com/talves/netlify-cms-react-example) starter project. It implements the backend as a component and bundles to a custom CMS deployment for your project.
 
@@ -60,3 +62,4 @@ The Netlify Logo is Copyright of [Netlify][2] and should not be used without the
 
 [1]: https://github.com/netlify/netlify-cms/pull/1011
 [2]: https://www.netlify.com/
+[3]: https://github.com/adarta/netlify-cms-components
